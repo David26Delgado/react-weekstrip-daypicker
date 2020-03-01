@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const WeekWrapper = styled.div``;
+const WeekWrapper = styled.div`
+  background-color: ${props => props.theme.wrapperBackground};
+`;
 
 const WeekHeader = styled.div`
   height: 44px;
@@ -23,6 +25,7 @@ const WeekHeader = styled.div`
     background: transparent;
     box-shadow: none;
     border: none;
+    color: ${props => props.theme.titleColor};
   }
   .next {
     right: 0;
