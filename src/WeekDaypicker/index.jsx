@@ -67,9 +67,8 @@ class WeekDaypicker extends React.Component {
     const { locale, workingWeek } = this.props;
     const days = [];
     const m = moment().locale(locale);
-    for (let i = workingWeek ? 1 : 0; i < (workingWeek ? 6 : 7); i += 1) {
-      let day = daysInitial[m.day(i).format('d')];
-      days.push(<li key={`weekday-${i}`}>{day}</li>);
+    for (let i = workingWeek ? 1 : 0; i < (workingWeek ? 6 : 7); i++) {
+      days.push(<li key={`weekday-${i % 7}`}>{daysInitial[m.day(i % 7).format("d")]}</li>);
     }
     return days;
   }
@@ -78,7 +77,7 @@ class WeekDaypicker extends React.Component {
     const { workingWeek } = this.props;
     const { startDate, selectedDate } = this.state;
     const days = [];
-    for (let i = workingWeek ? 1 : 0; i < (workingWeek ? 6 : 7); i += 1) {
+    for (let i = workingWeek ? 1 : 0; i < (workingWeek ? 6 : 7); i++) {
       const date = startDate.clone().add(i, 'd');
       days.push(
         <button
