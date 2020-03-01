@@ -19,11 +19,11 @@ class Component extends React.Component {
 }
 ```
 
-### Properties
+### Properties (Props)
 
 #### workingWeek
-Boolean, set to true for working week (Monday - Friday).  
-Defalut: `false`
+Boolean, set to true for working week (Sunday - Saturday).  
+Default: `false`
 
 #### locale
 String rapresenting the lang localization.  
@@ -34,13 +34,14 @@ Object with the color to style the component.
 Default:
 ```
 {
-    titleColor: "#000",
-    dayColor: "#222222",
-    dayBackground: "transparent",
-    weekdayColor: "#aaaaaa",
-    daySelectedColor: "#fff",
-    daySelectedBackground: "#3434ff",
-}
+    wrapperBackground: 'transparent',
+    titleColor: '#000',
+    dayColor: '#222222',
+    dayBackground: 'transparent',
+    weekdayColor: '#aaaaaa',
+    daySelectedColor: '#fff',
+    daySelectedBackground: '#3434ff'
+  },
 ``` 
 
 #### initDay
